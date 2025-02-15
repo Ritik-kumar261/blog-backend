@@ -11,8 +11,7 @@ class BlogController extends Controller
     //
     public function index(){
 
-        $blog=Blog::latest("created_at")->get();
-
+        $blog=Blog::latest("created_at")->paginate(10);
         return $blog;
     }
     // for show the detail of the blog 
