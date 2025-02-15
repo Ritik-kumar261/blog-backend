@@ -10,7 +10,11 @@ class BlogController extends Controller
 {
     //
     public function index(){
+<<<<<<< HEAD
         $blog=Blog::all();
+=======
+        $blog=Blog::latest("created_at")->get();
+>>>>>>> fix-readme
         return $blog;
     }
     // for show the detail of the blog 
