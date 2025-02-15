@@ -1,5 +1,4 @@
 
-
 This is the backend of the blog application built using Laravel. It provides a REST API to manage blog posts.
 
 ## 📌 Features
@@ -67,3 +66,4 @@ php artisan serve
 
 ## 📜 License
 This project is open-source under the MIT License." > README.md
+>>>>>>> fix-readme
