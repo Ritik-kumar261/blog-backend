@@ -17,3 +17,14 @@ CREATE TABLE `daily_blog` (
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_c
+
+-- // for the comment table where blog comment are stored 
+CREATE TABLE blog_comment (
+ id int AUTO_INCREMENT PRIMARY KEY,
+ post_id int default  null,
+ user_id int default null,
+ content varchar(255) DEFAULT null,
+ created_at timestamp DEFAULT CURRENT_TIMESTAMP,
+ updated_at timestamp default CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+FOREIGN KEY (post_id) REFERENCES daily_blog(id) on DELETE CASCADE
+)
